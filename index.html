@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>Flash Card</title>
+</head>
+<body>
+    <header>
+        <h1>Flashcard App</h1>
+        <h2>Card Creation</h2>
+    </header>
+    <section>
+        <form onsubmit="return AddFlashCard(event);" id="form-container">
+            <div class="justify-container">
+                <div class="formItem" id="box1">
+                    <label for="card-title-input" class="label" id="card-title-label">Card Title:</label>
+                    <input type="text" name="card-title-input" id="card-title-input">
+                </div>
+                <div class="formItem" id="box2">
+                    <label for="card-front-input" class="label">Card Front:</label>
+                    <textarea name="card-front-input" id="card-front-input" cols="30" rows="5" maxlength="160"></textarea>    
+                </div>
+                <div class="formItem" id="box3">
+                    <label for="card-back-input" class="label">Card Back:</label>
+                    <textarea name="card-back-input" id="card-back-input" cols="30" rows="5" maxlength="160"></textarea>    
+                </div>
+                <div class="formItem" id="box4">
+                    <button type="submit" id="submit">Add Card</button>
+                </div>
+            </div>
+        </form>
+    </section>
+    <br>
+    <div class="line"></div>
+    <br>
+    <main>
+        <div id="cards-top-container">
+            <h1 class="cards-top-item" id="cards-H1">Cards</h1>
+            <button class="cards-top-item" id="select">Toggle Select Mode</button>
+            <button class="cards-top-item" id="delete">Delete</button>
+        </div>
+        <h4>Click On Card To Flip</h4>
+        <div id="card-container"></div>
+    </main>
+    <!-- ADD JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+</html>
